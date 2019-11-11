@@ -1,0 +1,16 @@
+class QuestionsController < ApplicationController
+
+  def ask
+  end
+
+  def answer
+    @question = params[:@question]
+    if @question.downcase == "I am going to work"
+      @answer = "Great!"
+    elsif @question.last == "?"
+      @answer = "Silly question get dressed and go to work"
+    else
+      @answer = "I dont know, I get drunk all the Time"
+    end
+  end
+end
